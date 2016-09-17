@@ -19,9 +19,7 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
     
     // user inputs
     @IBOutlet weak var latitudeTextField: UITextField!
-    
     @IBOutlet weak var longitudeTextField: UITextField!
-    
     @IBOutlet weak var addLocationButton: UIButton!
     @IBOutlet weak var locateOnMapButton: UIButton!
     @IBOutlet weak var locationNameTextField: UITextField!
@@ -29,7 +27,11 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
     // Add Location
     @IBAction func addLocationBtnPressed(_ sender: AnyObject) {
         NSLog("Add location button pressed")
-        self.location = Location(clock_position: 3, name: "Party", region: nil)
+        let lat = Double(latitudeTextField.text!)
+        let long = Double(longitudeTextField.text!)
+        let coord = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
+        let region = CLCircularRegion(center: coord, radius: regionRadius, identifier: locationNameTextField.text!)
+        self.location = Location(clock_position: 3, name: locationNameTextField.text!, region: region)
         self.dismiss(animated: true, completion: nil)
     }
     

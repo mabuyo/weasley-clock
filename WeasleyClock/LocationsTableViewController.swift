@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import MapKit
 
 struct Location {
     let clock_position: Int
     let name: String
-    let region: String?
+    let region: CLCircularRegion
 }
 
-let home_location = Location(clock_position: 1, name: "Home", region: nil)
-let work_location = Location(clock_position: 2, name: "Work", region: nil)
+let regionRadius = 100.0
+
+let home_location = Location(clock_position: 1, name: "Home", region: CLCircularRegion(center: CLLocationCoordinate2D(latitude: 73.1234, longitude: 50.1234), radius: regionRadius, identifier: "Home1"))
+let work_location = Location(clock_position: 1, name: "Home", region: CLCircularRegion(center: CLLocationCoordinate2D(latitude: 70.1234, longitude: 48.1234), radius: regionRadius, identifier: "Work1"))
 
 var locations = [home_location, work_location]
 
@@ -64,10 +67,8 @@ class LocationsTableViewController: UITableViewController {
         
         let location = locations[indexPath.row]
         cell.textLabel?.text = location.name
-        cell.detailTextLabel?.text = String(location.clock_position)
+        cell.detailTextLabel?.text = String(location.region.center.latitude) + " and " + String(location.region.center.longitude)
 
-        
-        
         return cell
 
     }
