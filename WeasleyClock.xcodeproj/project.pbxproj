@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		FFA1B9B91D8D070D00375817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9B81D8D070D00375817 /* AppDelegate.swift */; };
-		FFA1B9BB1D8D070D00375817 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9BA1D8D070D00375817 /* ViewController.swift */; };
+		FFA1B9BB1D8D070D00375817 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9BA1D8D070D00375817 /* PageViewController.swift */; };
 		FFA1B9BE1D8D070D00375817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA1B9BC1D8D070D00375817 /* Main.storyboard */; };
 		FFA1B9C11D8D070D00375817 /* WeasleyClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9BF1D8D070D00375817 /* WeasleyClock.xcdatamodeld */; };
 		FFA1B9C31D8D070D00375817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA1B9C21D8D070D00375817 /* Assets.xcassets */; };
 		FFA1B9C61D8D070D00375817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA1B9C41D8D070D00375817 /* LaunchScreen.storyboard */; };
+		FFA1B9F11D8D183800375817 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F01D8D183800375817 /* MainViewController.swift */; };
+		FFA1B9F31D8D243300375817 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F21D8D243300375817 /* LocationsTableViewController.swift */; };
+		FFA1B9F51D8D283600375817 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F41D8D283600375817 /* LocationTableViewCell.swift */; };
+		FFA1B9F71D8D347800375817 /* LocationsNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F61D8D347800375817 /* LocationsNavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFA1B9B51D8D070D00375817 /* WeasleyClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeasleyClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA1B9B81D8D070D00375817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFA1B9BA1D8D070D00375817 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFA1B9BA1D8D070D00375817 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		FFA1B9BD1D8D070D00375817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFA1B9C01D8D070D00375817 /* WeasleyClock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeasleyClock.xcdatamodel; sourceTree = "<group>"; };
 		FFA1B9C21D8D070D00375817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFA1B9C51D8D070D00375817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFA1B9C71D8D070D00375817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA1B9F01D8D183800375817 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FFA1B9F21D8D243300375817 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
+		FFA1B9F41D8D283600375817 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		FFA1B9F61D8D347800375817 /* LocationsNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsNavViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				FFA1B9B81D8D070D00375817 /* AppDelegate.swift */,
-				FFA1B9BA1D8D070D00375817 /* ViewController.swift */,
+				FFA1B9BA1D8D070D00375817 /* PageViewController.swift */,
+				FFA1B9F21D8D243300375817 /* LocationsTableViewController.swift */,
+				FFA1B9F01D8D183800375817 /* MainViewController.swift */,
+				FFA1B9F61D8D347800375817 /* LocationsNavViewController.swift */,
 				FFA1B9BC1D8D070D00375817 /* Main.storyboard */,
+				FFA1B9F41D8D283600375817 /* LocationTableViewCell.swift */,
 				FFA1B9C21D8D070D00375817 /* Assets.xcassets */,
 				FFA1B9C41D8D070D00375817 /* LaunchScreen.storyboard */,
 				FFA1B9C71D8D070D00375817 /* Info.plist */,
@@ -140,9 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFA1B9BB1D8D070D00375817 /* ViewController.swift in Sources */,
+				FFA1B9F51D8D283600375817 /* LocationTableViewCell.swift in Sources */,
+				FFA1B9F71D8D347800375817 /* LocationsNavViewController.swift in Sources */,
+				FFA1B9F31D8D243300375817 /* LocationsTableViewController.swift in Sources */,
+				FFA1B9BB1D8D070D00375817 /* PageViewController.swift in Sources */,
 				FFA1B9C11D8D070D00375817 /* WeasleyClock.xcdatamodeld in Sources */,
 				FFA1B9B91D8D070D00375817 /* AppDelegate.swift in Sources */,
+				FFA1B9F11D8D183800375817 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
