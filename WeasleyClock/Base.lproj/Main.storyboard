@@ -88,6 +88,107 @@
             </objects>
             <point key="canvasLocation" x="1097" y="1695"/>
         </scene>
+        <!--Add Location View Controller-->
+        <scene sceneID="hqz-Ot-tN6">
+            <objects>
+                <viewController storyboardIdentifier="AddLocationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="En3-5p-VR3" customClass="AddLocationViewController" customModule="WeasleyClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2qu-Jf-61f"/>
+                        <viewControllerLayoutGuide type="bottom" id="cah-92-MRl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hcw-ZE-dX8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="siQ-xT-G2z">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XDB-kl-Vfx"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvl-NC-hAe">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-c6-3Aw">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-vd-2Js">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPq-56-Rh5">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j31-Md-PV6">
+                                <state key="normal" title="Show on map"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYZ-Oj-Ish">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEI-2k-yTk">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PL1-6J-Kgo">
+                                <state key="normal" title="Add location"/>
+                                <connections>
+                                    <action selector="addLocationBtnPressed:" destination="En3-5p-VR3" eventType="touchUpInside" id="Jg4-dE-dtO"/>
+                                    <segue destination="tuT-wP-1a5" kind="unwind" unwindAction="unwindToLocationListWithSender:" id="4UE-bQ-TmF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="siQ-xT-G2z" firstAttribute="trailing" secondItem="XDB-kl-Vfx" secondAttribute="trailing" id="0fi-SE-3iq"/>
+                            <constraint firstItem="j31-Md-PV6" firstAttribute="leading" secondItem="Hcw-ZE-dX8" secondAttribute="leadingMargin" constant="64" id="6K0-vI-zba"/>
+                            <constraint firstItem="siQ-xT-G2z" firstAttribute="top" secondItem="2qu-Jf-61f" secondAttribute="bottom" constant="8" id="C0a-b2-fJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="siQ-xT-G2z" secondAttribute="trailing" id="FJE-he-Lr7"/>
+                            <constraint firstItem="gbG-c6-3Aw" firstAttribute="top" secondItem="siQ-xT-G2z" secondAttribute="bottom" constant="4" id="IDO-gX-404"/>
+                            <constraint firstItem="gbG-c6-3Aw" firstAttribute="trailing" secondItem="7I3-vd-2Js" secondAttribute="trailing" id="MzR-5y-6UU"/>
+                            <constraint firstItem="j31-Md-PV6" firstAttribute="baseline" secondItem="PL1-6J-Kgo" secondAttribute="baseline" id="P3U-So-tLB"/>
+                            <constraint firstItem="cPq-56-Rh5" firstAttribute="centerY" secondItem="7I3-vd-2Js" secondAttribute="centerY" id="QMx-fS-8w7"/>
+                            <constraint firstItem="tYZ-Oj-Ish" firstAttribute="centerY" secondItem="AEI-2k-yTk" secondAttribute="centerY" id="ShD-8H-SpQ"/>
+                            <constraint firstItem="gbG-c6-3Aw" firstAttribute="leading" secondItem="7I3-vd-2Js" secondAttribute="leading" id="W18-SG-dco"/>
+                            <constraint firstItem="siQ-xT-G2z" firstAttribute="leading" secondItem="XDB-kl-Vfx" secondAttribute="leading" id="aNn-5V-N33"/>
+                            <constraint firstItem="XDB-kl-Vfx" firstAttribute="top" secondItem="j31-Md-PV6" secondAttribute="bottom" constant="8" symbolic="YES" id="b77-Hx-Lsv"/>
+                            <constraint firstItem="7I3-vd-2Js" firstAttribute="trailing" secondItem="AEI-2k-yTk" secondAttribute="trailing" id="bIr-2d-gzN"/>
+                            <constraint firstItem="7I3-vd-2Js" firstAttribute="leading" secondItem="AEI-2k-yTk" secondAttribute="leading" id="cLW-PH-Zoy"/>
+                            <constraint firstItem="XDB-kl-Vfx" firstAttribute="bottom" secondItem="cah-92-MRl" secondAttribute="top" id="csT-cr-eqE"/>
+                            <constraint firstItem="7I3-vd-2Js" firstAttribute="leading" secondItem="cPq-56-Rh5" secondAttribute="trailing" constant="18" id="dKI-nq-yZJ"/>
+                            <constraint firstItem="7I3-vd-2Js" firstAttribute="top" secondItem="gbG-c6-3Aw" secondAttribute="bottom" constant="9" id="dds-P3-cTV"/>
+                            <constraint firstItem="cPq-56-Rh5" firstAttribute="leading" secondItem="tYZ-Oj-Ish" secondAttribute="leading" id="faj-VJ-rnr"/>
+                            <constraint firstItem="Dvl-NC-hAe" firstAttribute="leading" secondItem="cPq-56-Rh5" secondAttribute="leading" id="fd8-Pu-L1i"/>
+                            <constraint firstItem="siQ-xT-G2z" firstAttribute="leading" secondItem="Hcw-ZE-dX8" secondAttribute="leading" id="gim-Wv-mzQ"/>
+                            <constraint firstItem="Dvl-NC-hAe" firstAttribute="centerY" secondItem="gbG-c6-3Aw" secondAttribute="centerY" id="lkE-R9-A8y"/>
+                            <constraint firstItem="j31-Md-PV6" firstAttribute="top" secondItem="AEI-2k-yTk" secondAttribute="bottom" constant="14" id="mZX-Q8-2yl"/>
+                            <constraint firstItem="AEI-2k-yTk" firstAttribute="top" secondItem="7I3-vd-2Js" secondAttribute="bottom" constant="11" id="mhM-LR-zKA"/>
+                            <constraint firstItem="PL1-6J-Kgo" firstAttribute="leading" secondItem="j31-Md-PV6" secondAttribute="trailing" constant="62" id="rSd-m9-lGh"/>
+                            <constraint firstItem="Dvl-NC-hAe" firstAttribute="leading" secondItem="Hcw-ZE-dX8" secondAttribute="leadingMargin" id="vBg-Jr-ahO"/>
+                            <constraint firstItem="gbG-c6-3Aw" firstAttribute="trailing" secondItem="Hcw-ZE-dX8" secondAttribute="trailingMargin" id="yzF-ff-nXv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addLocationButton" destination="PL1-6J-Kgo" id="fLC-Qn-oQj"/>
+                        <outlet property="latitudeTextField" destination="gbG-c6-3Aw" id="2bf-He-pDJ"/>
+                        <outlet property="locateOnMapButton" destination="j31-Md-PV6" id="dEG-1z-ziX"/>
+                        <outlet property="locationNameTextField" destination="AEI-2k-yTk" id="k4s-hf-qRP"/>
+                        <outlet property="longitudeTextField" destination="7I3-vd-2Js" id="84y-MI-87T"/>
+                        <outlet property="mapView" destination="XDB-kl-Vfx" id="jdC-40-Es2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ool-wJ-k1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tuT-wP-1a5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2109.5999999999999" y="1693.4032983508248"/>
+        </scene>
         <!--Clock View Controller-->
         <scene sceneID="9za-Fp-hK0">
             <objects>

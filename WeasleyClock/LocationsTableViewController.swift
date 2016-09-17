@@ -17,7 +17,7 @@ struct Location {
 let home_location = Location(clock_position: 1, name: "Home", region: nil)
 let work_location = Location(clock_position: 2, name: "Work", region: nil)
 
-let locations = [home_location, work_location]
+var locations = [home_location, work_location]
 
 class LocationsTableViewController: UITableViewController {
 
@@ -35,6 +35,10 @@ class LocationsTableViewController: UITableViewController {
     
     func addButtonPressed() {
         NSLog("add button pressed")
+        let addLocationView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddLocationViewController")
+       // show(addLocationView, sender: nil)
+        self.present(addLocationView, animated: true, completion: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,6 +71,16 @@ class LocationsTableViewController: UITableViewController {
         return cell
 
     }
+    
+    @IBAction func unwindToLocationList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? AddLocationViewController, let location = sourceViewController.location {
+            let newIndexPath = NSIndexPath(row: locations.count, section: 0)
+            locations.append(location)
+            tableView.insertRows(at: [newIndexPath as IndexPath], with: .bottom)
+        }
+    }
+    
+    
     
 
     /*
