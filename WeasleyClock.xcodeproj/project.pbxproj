@@ -20,6 +20,7 @@
 		FFA1B9F91D8D899600375817 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F81D8D899600375817 /* ClockViewController.swift */; };
 		FFA1B9FB1D8D93E500375817 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9FA1D8D93E500375817 /* SettingsViewController.swift */; };
 		FFA1B9FD1D8D9F1000375817 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9FC1D8D9F1000375817 /* AddLocationViewController.swift */; };
+		FFA1BA001D8E00D000375817 /* ClockHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9FF1D8E00D000375817 /* ClockHandView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		FFA1B9FA1D8D93E500375817 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FFA1B9FC1D8D9F1000375817 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		FFA1B9FE1D8DC96500375817 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		FFA1B9FF1D8E00D000375817 /* ClockHandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockHandView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				FFA1B9F01D8D183800375817 /* MainViewController.swift */,
 				FFA1B9FE1D8DC96500375817 /* Bridging-Header.h */,
 				FFA1B9BC1D8D070D00375817 /* Main.storyboard */,
+				FFA1B9FF1D8E00D000375817 /* ClockHandView.swift */,
 				FFA1B9FA1D8D93E500375817 /* SettingsViewController.swift */,
 				FFA1B9F81D8D899600375817 /* ClockViewController.swift */,
 				FFA1B9F41D8D283600375817 /* LocationTableViewCell.swift */,
@@ -239,6 +242,7 @@
 				FFA1B9F31D8D243300375817 /* LocationsTableViewController.swift in Sources */,
 				FFA1B9BB1D8D070D00375817 /* PageViewController.swift in Sources */,
 				FFA1B9C11D8D070D00375817 /* WeasleyClock.xcdatamodeld in Sources */,
+				FFA1BA001D8E00D000375817 /* ClockHandView.swift in Sources */,
 				FFA1B9FD1D8D9F1000375817 /* AddLocationViewController.swift in Sources */,
 				FFA1B9B91D8D070D00375817 /* AppDelegate.swift in Sources */,
 				FFA1B9F11D8D183800375817 /* MainViewController.swift in Sources */,

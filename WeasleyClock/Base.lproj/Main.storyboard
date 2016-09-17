@@ -81,7 +81,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aex-bW-6Fk" id="4J9-gw-642">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -211,12 +211,133 @@
                     <view key="view" contentMode="scaleToFill" id="uhV-JV-yRz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-with-outline" translatesAutoresizingMaskIntoConstraints="NO" id="73q-Li-U96"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-3T-X8y" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5TE-Kd-4Kc" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1h-jo-bvk" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EkO-p7-z70" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29O-ji-KNJ" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJd-Eq-B8P" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBW-zD-bOZ" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPz-Yi-QL2" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4i-kv-VBX" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EI-oQ-sJ0" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfT-mJ-9K5" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9l7-PS-HsD" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-qn-pHB" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDB-w6-Nkg" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASa-tl-VEH" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UL-vS-uIu" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y4i-kv-VBX" firstAttribute="top" secondItem="v1O-qn-pHB" secondAttribute="top" id="0cf-SW-9Q8"/>
+                            <constraint firstItem="EkO-p7-z70" firstAttribute="top" secondItem="29O-ji-KNJ" secondAttribute="bottom" constant="8" symbolic="YES" id="1M2-5o-CJn"/>
+                            <constraint firstItem="v1O-qn-pHB" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leading" constant="248" id="1fp-It-3v1"/>
+                            <constraint firstItem="qBW-zD-bOZ" firstAttribute="top" secondItem="vJd-Eq-B8P" secondAttribute="bottom" constant="8" symbolic="YES" id="2KV-Ez-hQA"/>
+                            <constraint firstItem="29O-ji-KNJ" firstAttribute="top" secondItem="FPz-Yi-QL2" secondAttribute="bottom" constant="84" id="30l-6H-g2R"/>
+                            <constraint firstItem="EkO-p7-z70" firstAttribute="trailing" secondItem="i1h-jo-bvk" secondAttribute="trailing" id="3EU-M4-xMz"/>
+                            <constraint firstItem="v1O-qn-pHB" firstAttribute="top" secondItem="eDB-w6-Nkg" secondAttribute="top" id="3NF-KJ-RJh"/>
+                            <constraint firstItem="2rw-eF-K42" firstAttribute="top" secondItem="5TE-Kd-4Kc" secondAttribute="bottom" constant="196" id="63P-9l-epD"/>
+                            <constraint firstItem="xfT-mJ-9K5" firstAttribute="bottom" secondItem="8EI-oQ-sJ0" secondAttribute="bottom" id="81g-oT-oez"/>
+                            <constraint firstItem="vJd-Eq-B8P" firstAttribute="top" secondItem="8Oa-3T-X8y" secondAttribute="bottom" constant="8" symbolic="YES" id="84R-5t-yGJ"/>
+                            <constraint firstItem="29O-ji-KNJ" firstAttribute="trailing" secondItem="FPz-Yi-QL2" secondAttribute="trailing" id="8Zl-oZ-Qyw"/>
+                            <constraint firstItem="Y4i-kv-VBX" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leading" constant="226" id="8j2-QK-GGT"/>
+                            <constraint firstItem="1UL-vS-uIu" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leadingMargin" constant="59" id="976-hu-3vE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ASa-tl-VEH" secondAttribute="trailing" constant="57" id="9n2-G1-lML"/>
+                            <constraint firstItem="9l7-PS-HsD" firstAttribute="top" secondItem="xfT-mJ-9K5" secondAttribute="top" id="BeX-xA-hz3"/>
+                            <constraint firstItem="Y4i-kv-VBX" firstAttribute="bottom" secondItem="v1O-qn-pHB" secondAttribute="bottom" id="BkE-aq-TrX"/>
+                            <constraint firstItem="ASa-tl-VEH" firstAttribute="leading" secondItem="eDB-w6-Nkg" secondAttribute="trailing" constant="10" id="Dbl-k2-7TM"/>
+                            <constraint firstItem="8Oa-3T-X8y" firstAttribute="leading" secondItem="vJd-Eq-B8P" secondAttribute="leading" id="Efu-2Y-7mg"/>
+                            <constraint firstItem="29O-ji-KNJ" firstAttribute="leading" secondItem="FPz-Yi-QL2" secondAttribute="leading" id="F4l-U2-XW0"/>
+                            <constraint firstItem="EkO-p7-z70" firstAttribute="top" secondItem="uhV-JV-yRz" secondAttribute="top" constant="419" id="Fjo-km-TAD"/>
+                            <constraint firstItem="9l7-PS-HsD" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leading" constant="96" id="Gwj-K8-ecJ"/>
+                            <constraint firstItem="eDB-w6-Nkg" firstAttribute="top" secondItem="ASa-tl-VEH" secondAttribute="top" id="HGn-RB-OiJ"/>
+                            <constraint firstItem="ASa-tl-VEH" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leading" constant="290" id="I8N-aa-ZcS"/>
+                            <constraint firstItem="1UL-vS-uIu" firstAttribute="bottom" secondItem="9l7-PS-HsD" secondAttribute="bottom" id="K7r-wt-7gC"/>
+                            <constraint firstItem="73q-Li-U96" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leadingMargin" id="Lu8-Wf-HB4"/>
+                            <constraint firstItem="73q-Li-U96" firstAttribute="top" secondItem="Jzg-he-aSR" secondAttribute="bottom" id="M5N-ew-X7n"/>
+                            <constraint firstItem="9l7-PS-HsD" firstAttribute="leading" secondItem="1UL-vS-uIu" secondAttribute="trailing" constant="9" id="MQY-bo-7dG"/>
+                            <constraint firstItem="v1O-qn-pHB" firstAttribute="bottom" secondItem="eDB-w6-Nkg" secondAttribute="bottom" id="MS2-0m-IAn"/>
+                            <constraint firstItem="FPz-Yi-QL2" firstAttribute="top" secondItem="uhV-JV-yRz" secondAttribute="top" constant="303" id="N0o-Hc-eiy"/>
+                            <constraint firstItem="i1h-jo-bvk" firstAttribute="top" secondItem="EkO-p7-z70" secondAttribute="bottom" constant="8" symbolic="YES" id="OIt-Nb-7Uy"/>
+                            <constraint firstItem="8EI-oQ-sJ0" firstAttribute="leading" secondItem="xfT-mJ-9K5" secondAttribute="trailing" constant="8" symbolic="YES" id="Oql-rh-rRf"/>
+                            <constraint firstItem="eDB-w6-Nkg" firstAttribute="leading" secondItem="v1O-qn-pHB" secondAttribute="trailing" constant="8" symbolic="YES" id="OzH-t2-u83"/>
+                            <constraint firstItem="FPz-Yi-QL2" firstAttribute="top" secondItem="qBW-zD-bOZ" secondAttribute="bottom" constant="10" id="PQE-xk-DoD"/>
+                            <constraint firstItem="8Oa-3T-X8y" firstAttribute="top" secondItem="Jzg-he-aSR" secondAttribute="bottom" constant="177" id="PvV-no-349"/>
+                            <constraint firstItem="8EI-oQ-sJ0" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leading" constant="136" id="QGO-3Z-wvL"/>
+                            <constraint firstAttribute="bottom" secondItem="73q-Li-U96" secondAttribute="bottom" constant="20" symbolic="YES" id="Qeq-aW-nLG"/>
+                            <constraint firstItem="5TE-Kd-4Kc" firstAttribute="top" secondItem="i1h-jo-bvk" secondAttribute="bottom" constant="8" symbolic="YES" id="QfC-17-vrT"/>
+                            <constraint firstItem="73q-Li-U96" firstAttribute="centerX" secondItem="qBW-zD-bOZ" secondAttribute="centerX" id="QiE-9F-VF9"/>
+                            <constraint firstItem="qBW-zD-bOZ" firstAttribute="leading" secondItem="FPz-Yi-QL2" secondAttribute="leading" id="RXY-cs-2qX"/>
+                            <constraint firstItem="vJd-Eq-B8P" firstAttribute="top" secondItem="uhV-JV-yRz" secondAttribute="top" constant="261" id="Se5-D2-cqA"/>
+                            <constraint firstItem="qBW-zD-bOZ" firstAttribute="top" secondItem="uhV-JV-yRz" secondAttribute="top" constant="281" id="VLA-Al-iGy"/>
+                            <constraint firstItem="EkO-p7-z70" firstAttribute="leading" secondItem="i1h-jo-bvk" secondAttribute="leading" id="acx-fk-K22"/>
+                            <constraint firstItem="eDB-w6-Nkg" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leading" constant="268" id="b2J-Lz-SmN"/>
+                            <constraint firstItem="v1O-qn-pHB" firstAttribute="leading" secondItem="Y4i-kv-VBX" secondAttribute="trailing" constant="10" id="bDg-lX-oHS"/>
+                            <constraint firstItem="8EI-oQ-sJ0" firstAttribute="bottom" secondItem="Y4i-kv-VBX" secondAttribute="bottom" id="bPe-p2-f2k"/>
+                            <constraint firstItem="1UL-vS-uIu" firstAttribute="top" secondItem="Jzg-he-aSR" secondAttribute="bottom" constant="285" id="bnB-SS-8YM"/>
+                            <constraint firstItem="qBW-zD-bOZ" firstAttribute="trailing" secondItem="FPz-Yi-QL2" secondAttribute="trailing" id="cPm-LA-jWn"/>
+                            <constraint firstItem="xfT-mJ-9K5" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leading" constant="116" id="crR-rW-CaY"/>
+                            <constraint firstItem="xfT-mJ-9K5" firstAttribute="top" secondItem="8EI-oQ-sJ0" secondAttribute="top" id="dGZ-CK-jzh"/>
+                            <constraint firstItem="i1h-jo-bvk" firstAttribute="leading" secondItem="5TE-Kd-4Kc" secondAttribute="leading" id="eUx-he-sFV"/>
+                            <constraint firstItem="5TE-Kd-4Kc" firstAttribute="top" secondItem="uhV-JV-yRz" secondAttribute="top" constant="459" id="fUn-oQ-iaf"/>
+                            <constraint firstItem="i1h-jo-bvk" firstAttribute="trailing" secondItem="5TE-Kd-4Kc" secondAttribute="trailing" id="gII-Mt-qKE"/>
+                            <constraint firstItem="29O-ji-KNJ" firstAttribute="trailing" secondItem="EkO-p7-z70" secondAttribute="trailing" id="hH7-qi-o8R"/>
+                            <constraint firstItem="eDB-w6-Nkg" firstAttribute="bottom" secondItem="ASa-tl-VEH" secondAttribute="bottom" id="iHa-dH-fn8"/>
+                            <constraint firstItem="1UL-vS-uIu" firstAttribute="top" secondItem="9l7-PS-HsD" secondAttribute="top" id="izi-n1-M1c"/>
+                            <constraint firstItem="73q-Li-U96" firstAttribute="trailing" secondItem="uhV-JV-yRz" secondAttribute="trailingMargin" id="jKE-o9-xcK"/>
+                            <constraint firstItem="8EI-oQ-sJ0" firstAttribute="top" secondItem="Y4i-kv-VBX" secondAttribute="top" id="jaW-gc-5Sn"/>
+                            <constraint firstItem="xfT-mJ-9K5" firstAttribute="leading" secondItem="9l7-PS-HsD" secondAttribute="trailing" constant="8" symbolic="YES" id="kvm-0o-RtQ"/>
+                            <constraint firstItem="1UL-vS-uIu" firstAttribute="centerY" secondItem="73q-Li-U96" secondAttribute="centerY" id="l7q-wl-L16"/>
+                            <constraint firstItem="29O-ji-KNJ" firstAttribute="leading" secondItem="EkO-p7-z70" secondAttribute="leading" id="lL9-BF-Lnm"/>
+                            <constraint firstItem="9l7-PS-HsD" firstAttribute="bottom" secondItem="xfT-mJ-9K5" secondAttribute="bottom" id="lbd-PD-JJo"/>
+                            <constraint firstItem="8Oa-3T-X8y" firstAttribute="trailing" secondItem="vJd-Eq-B8P" secondAttribute="trailing" id="ll0-Ik-lH3"/>
+                            <constraint firstItem="2rw-eF-K42" firstAttribute="top" secondItem="FPz-Yi-QL2" secondAttribute="bottom" constant="352" id="mtJ-bV-BUY"/>
+                            <constraint firstItem="Y4i-kv-VBX" firstAttribute="leading" secondItem="8EI-oQ-sJ0" secondAttribute="trailing" constant="78" id="qcs-c5-PRV"/>
+                            <constraint firstItem="i1h-jo-bvk" firstAttribute="top" secondItem="uhV-JV-yRz" secondAttribute="top" constant="439" id="s1W-cN-gbs"/>
+                            <constraint firstItem="8Oa-3T-X8y" firstAttribute="leading" secondItem="uhV-JV-yRz" secondAttribute="leading" constant="181" id="sXr-MW-GHg"/>
+                            <constraint firstItem="vJd-Eq-B8P" firstAttribute="leading" secondItem="qBW-zD-bOZ" secondAttribute="leading" id="xgN-pA-nfZ"/>
+                            <constraint firstItem="vJd-Eq-B8P" firstAttribute="trailing" secondItem="qBW-zD-bOZ" secondAttribute="trailing" id="xiI-2n-XTs"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7k8-iU-XxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="939"/>
+            <point key="canvasLocation" x="1096.8" y="938.68065967016503"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="jCn-oe-qkh">
@@ -294,4 +415,7 @@
             <point key="canvasLocation" x="157.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock-with-outline" width="309" height="309"/>
+    </resources>
 </document>

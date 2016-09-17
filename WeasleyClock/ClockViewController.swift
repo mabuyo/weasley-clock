@@ -9,12 +9,10 @@
 import UIKit
 
 class ClockViewController: UIViewController {
-    
-    @IBOutlet weak var saveButton: UIBarButtonItem!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Customize navbar
         
         self.navigationItem.title = "Clock"
