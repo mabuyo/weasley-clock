@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F7A1B311293C3693F2BFEC8 /* libPods-WeasleyClock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FA9CBE21F4A7AAAB78D632 /* libPods-WeasleyClock.a */; };
 		FFA1B9B91D8D070D00375817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9B81D8D070D00375817 /* AppDelegate.swift */; };
 		FFA1B9BB1D8D070D00375817 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9BA1D8D070D00375817 /* PageViewController.swift */; };
 		FFA1B9BE1D8D070D00375817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA1B9BC1D8D070D00375817 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E2A4B13211C75ACEC110133 /* Pods-WeasleyClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeasleyClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeasleyClock/Pods-WeasleyClock.debug.xcconfig"; sourceTree = "<group>"; };
+		5B722CCB3D52A115912044CC /* Pods-WeasleyClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeasleyClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeasleyClock/Pods-WeasleyClock.release.xcconfig"; sourceTree = "<group>"; };
+		67FA9CBE21F4A7AAAB78D632 /* libPods-WeasleyClock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeasleyClock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA1B9B51D8D070D00375817 /* WeasleyClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeasleyClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA1B9B81D8D070D00375817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA1B9BA1D8D070D00375817 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 		FFA1B9F81D8D899600375817 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
 		FFA1B9FA1D8D93E500375817 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FFA1B9FC1D8D9F1000375817 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		FFA1B9FE1D8DC96500375817 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +48,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F7A1B311293C3693F2BFEC8 /* libPods-WeasleyClock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64AEB9483DC22AAA0A0D501A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E2A4B13211C75ACEC110133 /* Pods-WeasleyClock.debug.xcconfig */,
+				5B722CCB3D52A115912044CC /* Pods-WeasleyClock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D6D93D05A31DF770B240D72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67FA9CBE21F4A7AAAB78D632 /* libPods-WeasleyClock.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FFA1B9AC1D8D070D00375817 = {
 			isa = PBXGroup;
 			children = (
 				FFA1B9B71D8D070D00375817 /* WeasleyClock */,
 				FFA1B9B61D8D070D00375817 /* Products */,
+				64AEB9483DC22AAA0A0D501A /* Pods */,
+				7D6D93D05A31DF770B240D72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +98,7 @@
 				FFA1B9F21D8D243300375817 /* LocationsTableViewController.swift */,
 				FFA1B9FC1D8D9F1000375817 /* AddLocationViewController.swift */,
 				FFA1B9F01D8D183800375817 /* MainViewController.swift */,
+				FFA1B9FE1D8DC96500375817 /* Bridging-Header.h */,
 				FFA1B9BC1D8D070D00375817 /* Main.storyboard */,
 				FFA1B9FA1D8D93E500375817 /* SettingsViewController.swift */,
 				FFA1B9F81D8D899600375817 /* ClockViewController.swift */,
@@ -92,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFA1B9CA1D8D070D00375817 /* Build configuration list for PBXNativeTarget "WeasleyClock" */;
 			buildPhases = (
+				8B75F0B724BBF8525EC922CD /* [CP] Check Pods Manifest.lock */,
 				FFA1B9B11D8D070D00375817 /* Sources */,
 				FFA1B9B21D8D070D00375817 /* Frameworks */,
 				FFA1B9B31D8D070D00375817 /* Resources */,
+				03F4625F875FC80FF22044F1 /* [CP] Embed Pods Frameworks */,
+				D4605D3940AAE71682337036 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +181,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03F4625F875FC80FF22044F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeasleyClock/Pods-WeasleyClock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B75F0B724BBF8525EC922CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4605D3940AAE71682337036 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeasleyClock/Pods-WeasleyClock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFA1B9B11D8D070D00375817 /* Sources */ = {
@@ -239,6 +316,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -281,12 +359,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		FFA1B9CB1D8D070D00375817 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2A4B13211C75ACEC110133 /* Pods-WeasleyClock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 33V38WJ343;
@@ -294,12 +374,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.htn.WeasleyClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeasleyClock/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		FFA1B9CC1D8D070D00375817 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B722CCB3D52A115912044CC /* Pods-WeasleyClock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 33V38WJ343;
@@ -307,6 +389,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.htn.WeasleyClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeasleyClock/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
