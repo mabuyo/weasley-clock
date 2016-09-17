@@ -16,7 +16,8 @@
 		FFA1B9F11D8D183800375817 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F01D8D183800375817 /* MainViewController.swift */; };
 		FFA1B9F31D8D243300375817 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F21D8D243300375817 /* LocationsTableViewController.swift */; };
 		FFA1B9F51D8D283600375817 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F41D8D283600375817 /* LocationTableViewCell.swift */; };
-		FFA1B9F71D8D347800375817 /* LocationsNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F61D8D347800375817 /* LocationsNavViewController.swift */; };
+		FFA1B9F91D8D899600375817 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9F81D8D899600375817 /* ClockViewController.swift */; };
+		FFA1B9FB1D8D93E500375817 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9FA1D8D93E500375817 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		FFA1B9F01D8D183800375817 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FFA1B9F21D8D243300375817 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
 		FFA1B9F41D8D283600375817 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
-		FFA1B9F61D8D347800375817 /* LocationsNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsNavViewController.swift; sourceTree = "<group>"; };
+		FFA1B9F81D8D899600375817 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		FFA1B9FA1D8D93E500375817 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +70,9 @@
 				FFA1B9BA1D8D070D00375817 /* PageViewController.swift */,
 				FFA1B9F21D8D243300375817 /* LocationsTableViewController.swift */,
 				FFA1B9F01D8D183800375817 /* MainViewController.swift */,
-				FFA1B9F61D8D347800375817 /* LocationsNavViewController.swift */,
 				FFA1B9BC1D8D070D00375817 /* Main.storyboard */,
+				FFA1B9FA1D8D93E500375817 /* SettingsViewController.swift */,
+				FFA1B9F81D8D899600375817 /* ClockViewController.swift */,
 				FFA1B9F41D8D283600375817 /* LocationTableViewCell.swift */,
 				FFA1B9C21D8D070D00375817 /* Assets.xcassets */,
 				FFA1B9C41D8D070D00375817 /* LaunchScreen.storyboard */,
@@ -153,12 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA1B9F51D8D283600375817 /* LocationTableViewCell.swift in Sources */,
-				FFA1B9F71D8D347800375817 /* LocationsNavViewController.swift in Sources */,
 				FFA1B9F31D8D243300375817 /* LocationsTableViewController.swift in Sources */,
 				FFA1B9BB1D8D070D00375817 /* PageViewController.swift in Sources */,
 				FFA1B9C11D8D070D00375817 /* WeasleyClock.xcdatamodeld in Sources */,
 				FFA1B9B91D8D070D00375817 /* AppDelegate.swift in Sources */,
 				FFA1B9F11D8D183800375817 /* MainViewController.swift in Sources */,
+				FFA1B9F91D8D899600375817 /* ClockViewController.swift in Sources */,
+				FFA1B9FB1D8D93E500375817 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

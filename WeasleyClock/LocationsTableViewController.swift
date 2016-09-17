@@ -24,11 +24,17 @@ class LocationsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let addButton = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addButtonPressed))
+        self.navigationItem.setRightBarButton(addButton, animated: true)
+        
+        self.navigationItem.title = "Locations"
+        self.navigationItem.backBarButtonItem?.title = "Done"
+        self.navigationItem.backBarButtonItem?.image = nil
+        
+    }
+    
+    func addButtonPressed() {
+        NSLog("add button pressed")
     }
 
     override func didReceiveMemoryWarning() {

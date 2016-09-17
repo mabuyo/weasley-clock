@@ -1,5 +1,5 @@
 //
-//  LocationsNavViewController.swift
+//  SettingsViewController.swift
 //  WeasleyClock
 //
 //  Created by Michelle Mabuyo on 2016-09-17.
@@ -8,20 +8,25 @@
 
 import UIKit
 
-class LocationsNavViewController: UINavigationController {
-
+class SettingsViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.navigationItem.title = "Locations"
-        
+        self.navigationItem.title = "Settings"
+        self.navigationItem.backBarButtonItem?.title = "Done"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func saveButtonPressed(_ sender: AnyObject) {
+        NSLog("save button pressed")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 
     /*
