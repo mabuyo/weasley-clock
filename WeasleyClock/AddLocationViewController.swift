@@ -11,7 +11,7 @@
 import UIKit
 import MapKit
 
-class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
@@ -31,13 +31,39 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
         let long = Double(longitudeTextField.text!)
         let coord = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
         let region = CLCircularRegion(center: coord, radius: regionRadius, identifier: locationNameTextField.text!)
-        self.location = Location(clock_position: 3, name: locationNameTextField.text!, region: region)
+        self.location = Location(clock_position: locations.count + 1, name: locationNameTextField.text!, region: region)
+        //locationManager.startMonitoring(for: region)
         self.dismiss(animated: true, completion: nil)
     }
     
+    // show location on map
+    @IBAction func showLocationBtnPressed(_ sender: AnyObject) {
+        NSLog("Show location button pressed.")
+        self.view.endEditing(true)
+
+        let lat = Double(latitudeTextField.text!)
+        let long = Double(longitudeTextField.text!)
+        let coord = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
+        let region = CLCircularRegion(center: coord, radius: regionRadius, identifier: locationNameTextField.text!)
+        self.location = Location(clock_position: 3, name: locationNameTextField.text!, region: region)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coord;
+        annotation.title = "\(title)";
+        mapView.addAnnotation(annotation)
+        
+        // 5. setup circle
+        let circle = MKCircle(center: coord, radius: regionRadius)
+        mapView.add(circle)
+        
+        let mkregion = MKCoordinateRegionMakeWithDistance(coord, 900, 900)
+        mapView.setRegion(mkregion, animated: true)
+    }
     
-    
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     
     
@@ -46,6 +72,11 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // textfield delegates
+        latitudeTextField.delegate = self
+        longitudeTextField.delegate = self
+        locationNameTextField.delegate = self
 
         // setup locationManager
         locationManager.delegate = self;
