@@ -22,10 +22,49 @@ class ClockViewController: UIViewController {
     @IBOutlet weak var user2_9: ClockHandView!
     
     
+    @IBAction func enterRegionBtnPressed(_ sender: AnyObject) {
+        NSLog("Enter region button pressed")
+        
+        if photon != nil {
+            photon?.callFunction("setUser", withArguments: ["Michelle"], completion: {(resultCode: NSNumber?, error: Error?) -> Void in
+                if (resultCode == 1) {
+                    NSLog("setUser successful")
+                    photon?.callFunction("update", withArguments: ["Home"], completion: {
+                        (resultCode: NSNumber?, error: Error?) -> Void in
+                        if (resultCode == 1) {
+                            NSLog("Update successful")
+                            photon?.getVariable("userLoc", completion: {(result:Any?, error:Error?) -> Void in
+                                if let e=error {
+                                    NSLog("error!!!")
+                                    NSLog(e.localizedDescription)
+                                }
+                                else {
+                                    NSLog("getVariable successful")
+                                    if let temp = result as? String {
+                                        NSLog("user is \(temp)")
+                                    }
+                                }
+                                
+                            })
+                        } //endif
+                        
+                    }) //end callFunction Update
+                    
+                } //endif
+            })
+        } else {
+            NSLog("no photon connected.")
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // get locations of users
+        if photon != nil {
+           // photon?.callFunction("get", withArguments: <#T##[Any]?#>, completion: <#T##((NSNumber?, Error?) -> Void)?##((NSNumber?, Error?) -> Void)?##(NSNumber?, Error?) -> Void#>)
+        }
+        
         // hardcoded user1 at 12, user2 at 3
         user1_12.userColor = UIColor.green
         user2_3.userColor = UIColor.blue

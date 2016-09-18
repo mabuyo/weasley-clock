@@ -67,7 +67,8 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
         // setup mapView
         mapView.delegate = self
         mapView.showsUserLocation = true
-        mapView.userTrackingMode = .follow
+        mapView.userTrackingMode = .none
+    
         
     }
     
@@ -76,7 +77,7 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
         
         // 1. status is not determined
         if CLLocationManager.authorizationStatus() == .notDetermined {
-            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
         }
             // 2. authorization were denied
         else if CLLocationManager.authorizationStatus() == .denied {
@@ -96,7 +97,7 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
         let coord = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
         let region = CLCircularRegion(center: coord, radius: regionRadius, identifier: locationNameTextField.text!)
         self.location = Location(clock_position: locations.count + 1, name: locationNameTextField.text!, region: region)
-        //locationManager.startMonitoring(for: region)
+        locationManager.startMonitoring(for: region)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -133,7 +134,9 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
     
     
     
-    
+    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
+        NSLog("didstart monitoringfor " + region.identifier)
+    }
     
     // 1. user enter region
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {

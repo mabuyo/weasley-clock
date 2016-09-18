@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="mapstogpx.com" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+  <metadata>
+    <link href="http://www.mapstogpx.com">
+      <text>Sverrir Sigmundarson</text>
+    </link>
+    <!--desc>Map data ©2016 Google</desc-->
+    <!--copyright author="Google Inc">
+    	<year>2016</year>
+    	<license>https://developers.google.com/maps/terms</license>
+    </copyright-->
+    <!--url>https://www.google.co.uk/maps/dir/43.4741271,-80.5423472/43.4735482,-80.5419016/@43.4746073,-80.5410959,15z/data=!4m9!4m8!1m5!3m4!1m2!1d-80.5243048!2d43.4789433!3s0x882bf3f39d91bd65:0x232e46cdc950617d!1m0!3e0?hl=en</url-->
+    <time>2016-09-18T02:28:36Z</time>
+  </metadata>
+  <wpt lat="43.4741271" lon="-80.5423472">
+    <name>Ring Road</name>
+    <desc>Ring Road, Waterloo, ON N2L 3G1, Canada</desc>
+  </wpt>
+  <wpt lat="43.4735482" lon="-80.5419016">
+    <name>Ring Road</name>
+    <desc>Ring Road, Waterloo, ON N2L 3G1, Canada</desc>
+  </wpt>
+<trk>
+  <name>Ring Road to Ring Road</name>
+  <number>1</number>
+  <trkseg>
+  <trkpt lat="43.4741271" lon="-80.5423472">
+    <name>TP001</name>
+  </trkpt>
+  <trkpt lat="43.47408" lon="-80.54232">
+    <name>TP002</name>
+  </trkpt>
+  <trkpt lat="43.47357" lon="-80.54192">
+    <name>TP003</name>
+  </trkpt>
+  <trkpt lat="43.47355" lon="-80.5419">
+    <name>TP004</name>
+  </trkpt>
+  <trkpt lat="43.4735482" lon="-80.5419016">
+    <name>TP005</name>
+  </trkpt>
+  </trkseg>
+</trk>
+</gpx>

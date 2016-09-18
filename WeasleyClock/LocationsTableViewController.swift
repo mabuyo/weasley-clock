@@ -68,7 +68,21 @@ class LocationsTableViewController: UITableViewController {
         let location = locations[indexPath.row]
         cell.textLabel?.text = location.name
         cell.detailTextLabel?.text = String(location.region.center.latitude) + " and " + String(location.region.center.longitude)
-
+        
+        //reverseGeocoding(latitude: location.region.center.latitude, longitude: location.region.center.longitude)
+        //let loc = CLLocation(latitude: location.region.center.latitude, longitude: location.region.center.longitude)
+        
+        /*
+        CLGeocoder().reverseGeocodeLocation(loc, completionHandler: {(placemarks: [CLPlacemark]?, error: Error?) -> Void in
+               NSLog("reverse geocodelocation")
+            if error == nil && (placemarks?.count)! > 0 {
+                let placeMark = placemarks?.last
+                NSLog("\(placeMark!.locality)")
+                //NSLog("\(placeMark!.thoroughfare)\n\(placeMark!.postalCode) \(placeMark!.locality)\n\(placeMark!.country)")
+                //cell.detailTextLabel?.text = "\(placeMark!.thoroughfare)\n\(placeMark!.postalCode) \(placeMark!.locality)\n\(placeMark!.country)"
+            }
+        })
+ */
         return cell
 
     }
@@ -80,7 +94,6 @@ class LocationsTableViewController: UITableViewController {
             tableView.insertRows(at: [newIndexPath as IndexPath], with: .bottom)
         }
     }
-    
     
     
 
@@ -100,7 +113,7 @@ class LocationsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

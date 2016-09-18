@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F7A1B311293C3693F2BFEC8 /* libPods-WeasleyClock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FA9CBE21F4A7AAAB78D632 /* libPods-WeasleyClock.a */; };
 		FF553D5E1D8E30B600950D90 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF553D5D1D8E30B600950D90 /* LocationSearchTableViewController.swift */; };
+		FF553D641D8E691F00950D90 /* SimulateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF553D631D8E691F00950D90 /* SimulateMapViewController.swift */; };
 		FFA1B9B91D8D070D00375817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9B81D8D070D00375817 /* AppDelegate.swift */; };
 		FFA1B9BB1D8D070D00375817 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B9BA1D8D070D00375817 /* PageViewController.swift */; };
 		FFA1B9BE1D8D070D00375817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA1B9BC1D8D070D00375817 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		5B722CCB3D52A115912044CC /* Pods-WeasleyClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeasleyClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeasleyClock/Pods-WeasleyClock.release.xcconfig"; sourceTree = "<group>"; };
 		67FA9CBE21F4A7AAAB78D632 /* libPods-WeasleyClock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeasleyClock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF553D5D1D8E30B600950D90 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		FF553D631D8E691F00950D90 /* SimulateMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulateMapViewController.swift; sourceTree = "<group>"; };
 		FFA1B9B51D8D070D00375817 /* WeasleyClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeasleyClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA1B9B81D8D070D00375817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA1B9BA1D8D070D00375817 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				FFA1B9F01D8D183800375817 /* MainViewController.swift */,
 				FFA1B9FE1D8DC96500375817 /* Bridging-Header.h */,
 				FFA1B9BC1D8D070D00375817 /* Main.storyboard */,
+				FF553D631D8E691F00950D90 /* SimulateMapViewController.swift */,
 				FF553D5D1D8E30B600950D90 /* LocationSearchTableViewController.swift */,
 				FFA1B9FF1D8E00D000375817 /* ClockHandView.swift */,
 				FFA1B9FA1D8D93E500375817 /* SettingsViewController.swift */,
@@ -244,6 +247,7 @@
 				FFA1B9F51D8D283600375817 /* LocationTableViewCell.swift in Sources */,
 				FFA1B9F31D8D243300375817 /* LocationsTableViewController.swift in Sources */,
 				FFA1B9BB1D8D070D00375817 /* PageViewController.swift in Sources */,
+				FF553D641D8E691F00950D90 /* SimulateMapViewController.swift in Sources */,
 				FFA1B9C11D8D070D00375817 /* WeasleyClock.xcdatamodeld in Sources */,
 				FFA1BA001D8E00D000375817 /* ClockHandView.swift in Sources */,
 				FFA1B9FD1D8D9F1000375817 /* AddLocationViewController.swift in Sources */,

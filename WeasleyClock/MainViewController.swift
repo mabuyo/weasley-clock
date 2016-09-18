@@ -8,9 +8,27 @@
 
 import UIKit
 
+var photon:SparkDevice?
+var username: String?
+
 class MainViewController: UIViewController {
+    @IBOutlet weak var nameField: UITextField!
     
-    @IBAction func testPhoton(_ sender: AnyObject) {
+    
+    
+    @IBAction func connectToPhoton() {
+        NSLog("Connecting to Photon")
+
+        /*
+        SparkCloud.sharedInstance().login(withUser: "b83moon-@hotmail.com", password: "Otherside8") { (error:Error?) -> Void in
+            if let e=error {
+                NSLog("Wrong credentials or no internet connectivity, please try again")
+            }
+            else {
+                NSLog("Logged in")
+            }
+        }
+*/
         // var setupController = SparkSetupMainController()
         // self.present(setupController!, animated: true, completion: nil)
         
@@ -26,8 +44,12 @@ class MainViewController: UIViewController {
                 {
                     if device.name == "Weasley_Clock"
                     {
+                        photon = device
+                        NSLog("Got it")
+                        device.callFunction("digitalWrite", withArguments: ["D7", "HIGH"], completion: nil)
+                        /*
                         // 4
-                        // device.callFunction("led", withArguments: ["on"], completion: nil)
+                         device.callFunction("led", withArguments: ["on"], completion: nil)
                         device.callFunction("setUser", withArguments: ["Michelle"], completion: {(resultCode: NSNumber?, error: Error?) -> Void in
                             if (resultCode == 1) {
                                 NSLog("setUser successful")
@@ -54,7 +76,7 @@ class MainViewController: UIViewController {
                                 
                             } //endif
                         })
-                        
+                        */
                         /*
                          let myDeviceVariables : Dictionary? = device.variables as? Dictionary<String,String>
                          NSLog("MyDevice first Variable is called \(myDeviceVariables!.keys.first) and is from type \(myDeviceVariables?.values.first)")
@@ -69,9 +91,12 @@ class MainViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var usernameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        username = usernameTextField.text
+        
         
         // Do any additional setup after loading the view.
     }

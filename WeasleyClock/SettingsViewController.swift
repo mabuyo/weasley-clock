@@ -10,11 +10,18 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "Settings"
         self.navigationItem.backBarButtonItem?.title = "Done"
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        nameTextField.text  = username
     }
 
     override func didReceiveMemoryWarning() {
