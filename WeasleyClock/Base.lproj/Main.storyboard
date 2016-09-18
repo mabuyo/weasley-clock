@@ -212,7 +212,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-with-outline" translatesAutoresizingMaskIntoConstraints="NO" id="73q-Li-U96"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-icons" translatesAutoresizingMaskIntoConstraints="NO" id="73q-Li-U96"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-3T-X8y" customClass="ClockHandView" customModule="WeasleyClock" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -334,6 +334,16 @@
                             <constraint firstItem="vJd-Eq-B8P" firstAttribute="trailing" secondItem="qBW-zD-bOZ" secondAttribute="trailing" id="xiI-2n-XTs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="user1_12" destination="8Oa-3T-X8y" id="l6G-fE-aKm"/>
+                        <outlet property="user1_3" destination="ASa-tl-VEH" id="oJz-3a-ifh"/>
+                        <outlet property="user1_6" destination="5TE-Kd-4Kc" id="PXW-wj-UaG"/>
+                        <outlet property="user1_9" destination="1UL-vS-uIu" id="tEa-6p-VPX"/>
+                        <outlet property="user2_12" destination="vJd-Eq-B8P" id="15P-P8-hgV"/>
+                        <outlet property="user2_3" destination="eDB-w6-Nkg" id="hF4-55-7oa"/>
+                        <outlet property="user2_6" destination="i1h-jo-bvk" id="sw7-te-qUH"/>
+                        <outlet property="user2_9" destination="9l7-PS-HsD" id="Awe-o4-cLI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7k8-iU-XxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -416,6 +426,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clock-with-outline" width="309" height="309"/>
+        <image name="clock-icons" width="309" height="309"/>
     </resources>
 </document>

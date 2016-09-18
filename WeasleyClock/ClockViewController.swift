@@ -9,9 +9,26 @@
 import UIKit
 
 class ClockViewController: UIViewController {
-        
+    
+    // user LEDs
+    // user#_clocknumber
+    @IBOutlet weak var user1_12: ClockHandView!
+    @IBOutlet weak var user2_12: ClockHandView!
+    @IBOutlet weak var user1_3: ClockHandView!
+    @IBOutlet weak var user2_3: ClockHandView!
+    @IBOutlet weak var user1_6: ClockHandView!
+    @IBOutlet weak var user2_6: ClockHandView!
+    @IBOutlet weak var user1_9: ClockHandView!
+    @IBOutlet weak var user2_9: ClockHandView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // get locations of users
+        // hardcoded user1 at 12, user2 at 3
+        user1_12.userColor = UIColor.green
+        user2_3.userColor = UIColor.blue
         
         // Customize navbar
         
@@ -24,7 +41,7 @@ class ClockViewController: UIViewController {
         let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsButtonPressed))
         self.navigationItem.setRightBarButton(settingsButton, animated: true)
         
-
+        
     }
 
     func locationsButtonPressed() {
