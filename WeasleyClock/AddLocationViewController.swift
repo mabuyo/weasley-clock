@@ -6,13 +6,20 @@
 //  Copyright © 2016 Michelle Mabuyo. All rights reserved.
 //  
 //  Source:  https://www.appcoda.com/geo-targeting-ios/
-//
+//  https://www.thorntech.com/2016/01/how-to-search-for-location-using-apples-mapkit/
 
 import UIKit
 import MapKit
 
-class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate {
+class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate, UISearchBarDelegate {
 
+    // map search stuff
+    @IBOutlet weak var searchBar: UISearchBar!
+    var resultSearchController: UISearchController? = nil
+    var locationSearchTable: LocationSearchTableViewController! = nil
+    var locationsTable: LocationsTableViewController! = nil
+
+    // map stuff
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
     var location: Location!
@@ -23,6 +30,63 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
     @IBOutlet weak var addLocationButton: UIButton!
     @IBOutlet weak var locateOnMapButton: UIButton!
     @IBOutlet weak var locationNameTextField: UITextField!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        // textfield delegates
+        latitudeTextField.delegate = self
+        longitudeTextField.delegate = self
+        locationNameTextField.delegate = self
+        
+        self.locationsTable = storyboard!.instantiateViewController(withIdentifier: "LocationsTableViewController") as! LocationsTableViewController
+        
+        // search results stuff
+        self.locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTableViewController
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        
+        self.searchBar.sizeToFit()
+        self.searchBar.placeholder = "Search for places"
+        
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
+        
+        searchBar.delegate = self
+        locationSearchTable.mapView = mapView
+        locationSearchTable.searchBar = self.searchBar
+        
+        // setup locationManager
+        locationManager.delegate = self;
+        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        
+        // setup mapView
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // 1. status is not determined
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        }
+            // 2. authorization were denied
+        else if CLLocationManager.authorizationStatus() == .denied {
+            print("Location services were previously denied. Please enable location services for this app in Settings.")
+        }
+            // 3. we do have authorization
+        else if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            locationManager.startUpdatingLocation()
+        }
+    }
     
     // Add Location
     @IBAction func addLocationBtnPressed(_ sender: AnyObject) {
@@ -70,43 +134,6 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // textfield delegates
-        latitudeTextField.delegate = self
-        longitudeTextField.delegate = self
-        locationNameTextField.delegate = self
-
-        // setup locationManager
-        locationManager.delegate = self;
-        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters;
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        
-        // setup mapView
-        mapView.delegate = self
-        mapView.showsUserLocation = true
-        mapView.userTrackingMode = .follow
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // 1. status is not determined
-        if CLLocationManager.authorizationStatus() == .notDetermined {
-            locationManager.requestAlwaysAuthorization()
-        }
-            // 2. authorization were denied
-        else if CLLocationManager.authorizationStatus() == .denied {
-            print("Location services were previously denied. Please enable location services for this app in Settings.")
-        }
-            // 3. we do have authorization
-        else if CLLocationManager.authorizationStatus() == .authorizedAlways {
-            locationManager.startUpdatingLocation()
-        }
-    }
-
     
     // 1. user enter region
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
@@ -141,6 +168,40 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate, MK
             return MKPolylineRenderer()
         }
     }
+    
+    // MARK: UISearchBarDelegate
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        return true
+    }
+    
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        NSLog("Search clicked")
+        
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = searchBar.text
+        request.region = mapView.region
+        let search = MKLocalSearch(request: request)
+        search.start { response, _ in
+            guard let response = response else {
+                return
+            }
+            self.locationSearchTable?.matchingItems = response.mapItems
+            self.locationSearchTable?.tableView.reloadData()
+            NSLog("response: ")
+        }
+        show(locationSearchTable, sender: nil)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
 
-
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        NSLog("textDidChange with: " + searchText)
+     
+    }
+    
 }
+
